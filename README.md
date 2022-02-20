@@ -1,5 +1,7 @@
 # Should I Go Sailing?
 
+A programm which sends emails when the conditions are perfect for sailing.
+
 ## Params:
 
 `minWind`, stores the minimal amount of wind (kts) for sailing.  
