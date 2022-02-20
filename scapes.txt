@@ -1,0 +1,207 @@
+[<div class="weathertable__row row-clear row-stripe ws7-g">
+<div class="windbar-mobile">
+<div class="windbar-mobile__wind ws7 level-8"></div>
+<div class="windbar-mobile__gusts ws11 level-13"></div>
+<span class="data-direction-unit units-wd units-wd-deg data--minor weathertable__cell" style="display: none;">
+                                        272°
+                                    </span>
+<span class="data-direction-unit units-wd units-wd-dir data--minor weathertable__cell" style="display: none;">
+                                        W
+                                    </span>
+</div>
+<div class="cell-timespan weathertable__cellgroup weathertable__cellgroup--stacked">
+<div class="data-time weathertable__cell ws-mobile-7">
+<span class="value">07h</span>
+</div>
+</div>
+<div class="cell-wind-1 weathertable__cellgroup">
+<div class="data-windbar--mobile ws6 level-8 weathertable__cell">
+</div>
+</div>
+<div class="cell-wind-2 weathertable__cellgroup weathertable__cellgroup--stacked">
+<div class="data-direction-arrow units-wd-sym weathertable__cell">
+<div class="directionarrow icon-direction-solid-grey" style="transform: rotate(272deg)" title="272°"></div>
+</div>
+<span class="data-direction-unit units-wd units-wd-deg data--minor weathertable__cell" style="display: none;">
+                                        272°
+                                    </span>
+<span class="data-direction-unit units-wd units-wd-dir data--minor weathertable__cell" style="display: none;">
+                                        W
+                                    </span>
+</div>
+<div class="cell-wind-3 weathertable__cellgroup">
+<div class="data--major data-bar weathertable__cell wsmax-level-16">
+<div class="speed">
+<span class="data-wrap">
+<span class="units-ws">14</span> <span class="data-unit units-desc-ws">kts</span></span>
+</div>
+<div class="data-windbar--desktop ws7 level-8"></div>
+</div>
+<div class="data-gusts data--minor ws11 weathertable__cell">
+<span class="data-unit">max</span> <span class="units-ws">22</span> <span class="data-unit units-desc-ws">kts</span>
+</div>
+</div>
+<div class="cell-weather-1 weathertable__cellgroup weathertable__cellgroup--stacked one">
+<div class="data-cover weathertable__cell">
+<div class="data-cover__symbol icon-n-bkn units-cl-sym"> </div>
+<span class="data-cover__number units-cl-perc" style="display: none">75%</span>
+</div>
+<div class="data-preciptype weathertable__cell">
+</div>
+<div class="data-rain data--minor weathertable__cell">
+</div>
+</div>
+<div class="cell-weather-2 weathertable__cellgroup">
+<div class="data-temp data--major ws8 weathertable__cell">
+<span class="units-at">2</span><span class="data-unit units-desc-at">° C</span>
+</div>
+<div class="data-feelslike units-at weathertable__cell">
+<span class="units-at">-3</span>
+</div>
+<div class="data-humidity data--major weathertable__cell">
+                                        91<span class="data-unit">%</span>
+</div>
+<div class="data-pressure data--minor weathertable__cell">
+<span class="units-ap">996</span> <span class="data-unit units-desc-ap">hpa</span>
+</div>
+</div>
+<span class="ws-gradient"></span>
+</div>, <div class="weathertable__row row-clear row-stripe ws12-g">
+<div class="windbar-mobile">
+<div class="windbar-mobile__wind ws12 level-15"></div>
+<div class="windbar-mobile__gusts ws18 level-22"></div>
+<span class="data-direction-unit units-wd units-wd-deg data--minor weathertable__cell" style="display: none;">
+                                        258°
+                                    </span>
+<span class="data-direction-unit units-wd units-wd-dir data--minor weathertable__cell" style="display: none;">
+                                        WSW
+                                    </span>
+</div>
+<div class="cell-timespan weathertable__cellgroup weathertable__cellgroup--stacked">
+<div class="data-time weathertable__cell ws-mobile-12">
+<span class="value">07h</span>
+</div>
+</div>
+<div class="cell-wind-1 weathertable__cellgroup">
+<div class="data-windbar--mobile ws12 level-15 weathertable__cell">
+</div>
+</div>
+<div class="cell-wind-2 weathertable__cellgroup weathertable__cellgroup--stacked">
+<div class="data-direction-arrow units-wd-sym weathertable__cell">
+<div class="directionarrow icon-direction-solid-grey" style="transform: rotate(258deg)" title="258°"></div>
+</div>
+<span class="data-direction-unit units-wd units-wd-deg data--minor weathertable__cell" style="display: none;">
+                                        258°
+                                    </span>
+<span class="data-direction-unit units-wd units-wd-dir data--minor weathertable__cell" style="display: none;">
+                                        WSW
+                                    </span>
+</div>
+<div class="cell-wind-3 weathertable__cellgroup">
+<div class="data--major data-bar weathertable__cell wsmax-level-19">
+<div class="speed">
+<span class="data-wrap">
+<span class="units-ws">25</span> <span class="data-unit units-desc-ws">kts</span></span>
+</div>
+<div class="data-windbar--desktop ws12 level-15"></div>
+</div>
+<div class="data-gusts data--minor ws18 weathertable__cell">
+<span class="data-unit">max</span> <span class="units-ws">36</span> <span class="data-unit units-desc-ws">kts</span>
+</div>
+</div>
+<div class="cell-weather-1 weathertable__cellgroup weathertable__cellgroup--stacked one">
+<div class="data-cover weathertable__cell">
+<div class="data-cover__symbol icon-n-ovc units-cl-sym"> </div>
+<span class="data-cover__number units-cl-perc" style="display: none">99%</span>
+</div>
+<div class="data-preciptype weathertable__cell">
+</div>
+<div class="data-rain data--minor weathertable__cell">
+</div>
+</div>
+<div class="cell-weather-2 weathertable__cellgroup">
+<div class="data-temp data--major ws8 weathertable__cell">
+<span class="units-at">1</span><span class="data-unit units-desc-at">° C</span>
+</div>
+<div class="data-feelslike units-at weathertable__cell">
+<span class="units-at">-6</span>
+</div>
+<div class="data-humidity data--major weathertable__cell">
+                                        71<span class="data-unit">%</span>
+</div>
+<div class="data-pressure data--minor weathertable__cell">
+<span class="units-ap">981</span> <span class="data-unit units-desc-ap">hpa</span>
+</div>
+</div>
+<span class="ws-gradient"></span>
+</div>, <div class="weathertable__row row-clear row-stripe ws10-g">
+<div class="windbar-mobile">
+<div class="windbar-mobile__wind ws10 level-13"></div>
+<div class="windbar-mobile__gusts ws16 level-20"></div>
+<span class="data-direction-unit units-wd units-wd-deg data--minor weathertable__cell" style="display: none;">
+                                        297°
+                                    </span>
+<span class="data-direction-unit units-wd units-wd-dir data--minor weathertable__cell" style="display: none;">
+                                        WNW
+                                    </span>
+</div>
+<div class="cell-timespan weathertable__cellgroup weathertable__cellgroup--stacked">
+<div class="data-time weathertable__cell ws-mobile-10">
+<span class="value">07h</span>
+</div>
+</div>
+<div class="cell-wind-1 weathertable__cellgroup">
+<div class="data-windbar--mobile ws10 level-12 weathertable__cell">
+</div>
+</div>
+<div class="cell-wind-2 weathertable__cellgroup weathertable__cellgroup--stacked">
+<div class="data-direction-arrow units-wd-sym weathertable__cell">
+<div class="directionarrow icon-direction-solid-grey" style="transform: rotate(297deg)" title="297°"></div>
+</div>
+<span class="data-direction-unit units-wd units-wd-deg data--minor weathertable__cell" style="display: none;">
+                                        297°
+                                    </span>
+<span class="data-direction-unit units-wd units-wd-dir data--minor weathertable__cell" style="display: none;">
+                                        WNW
+                                    </span>
+</div>
+<div class="cell-wind-3 weathertable__cellgroup">
+<div class="data--major data-bar weathertable__cell wsmax-level-13">
+<div class="speed">
+<span class="data-wrap">
+<span class="units-ws">21</span> <span class="data-unit units-desc-ws">kts</span></span>
+</div>
+<div class="data-windbar--desktop ws10 level-13"></div>
+</div>
+<div class="data-gusts data--minor ws16 weathertable__cell">
+<span class="data-unit">max</span> <span class="units-ws">32</span> <span class="data-unit units-desc-ws">kts</span>
+</div>
+</div>
+<div class="cell-weather-1 weathertable__cellgroup weathertable__cellgroup--stacked two">
+<div class="data-cover weathertable__cell">
+<div class="data-cover__symbol icon-n-ovc units-cl-sym"> </div>
+<span class="data-cover__number units-cl-perc" style="display: none">96%</span>
+</div>
+<div class="data-preciptype weathertable__cell">
+<div class="icon-rain-1"></div>
+</div>
+<div class="data-rain data--minor weathertable__cell">
+<span class="units-pr">0.1</span> <span class="data-unit units-desc-pr">mm</span>
+</div>
+</div>
+<div class="cell-weather-2 weathertable__cellgroup">
+<div class="data-temp data--major ws9 weathertable__cell">
+<span class="units-at">3</span><span class="data-unit units-desc-at">° C</span>
+</div>
+<div class="data-feelslike units-at weathertable__cell">
+<span class="units-at">-3</span>
+</div>
+<div class="data-humidity data--major weathertable__cell">
+                                        83<span class="data-unit">%</span>
+</div>
+<div class="data-pressure data--minor weathertable__cell">
+<span class="units-ap">998</span> <span class="data-unit units-desc-ap">hpa</span>
+</div>
+</div>
+<span class="ws-gradient"></span>
+</div>]
