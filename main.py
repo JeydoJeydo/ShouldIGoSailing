@@ -1,7 +1,9 @@
+from email import message
 import keys # remove line,private smtp credentials are stored there
 import requests
 from bs4 import BeautifulSoup
 import smtplib
+from email.mime.text import MIMEText
 
 url = requests.get('https://www.windfinder.com/weatherforecast/salzgittersee')
 
@@ -27,9 +29,14 @@ def sendEmail():
     smtp_server.starttls()
     smtp_server.ehlo()
     smtp_server.login(emailSender, emailPassword)
-    msg_to_send="""From: Siling reminder <{emailFrom}>\nTo: <{emailReceiver}>\nSubject: You should go siling today\nThe Wind is perfect at {weatherTime}\nHave fun!""".format(emailFrom = emailSender, emailReceiver = emailReceiver, weatherTime = sailingPossibilitys)
+    body = f"The Wind is perfekt at\n\n{sailingPossibilitys}\nHave fun!"
+    msg_to_send = MIMEText(body)
+    msg_to_send['Subject'] = "You should go sailing today"
+    msg_to_send['From'] = f"Sailing Reminder <{emailSender}>"
+    msg_to_send['To'] = f"<{emailReceiver}>"
+
     print(msg_to_send)
-    smtp_server.sendmail(emailSender, emailReceiver, msg_to_send)
+    smtp_server.sendmail(emailSender, emailReceiver, msg_to_send.as_string())
     smtp_server.quit()
     print("email send")
 
@@ -53,7 +60,7 @@ sailingPossibilitys = ""
 for x in range(0, 48, 2):
     if windArray[x] >= minWind and windArray[x+1] <= maxWind and rainArray[singleSteps] <= maxRain and countHour+1 >= minTime and countHour+1 <= maxTime:
         if countHour >= minHours:
-            dataString = """\n{hour} o'clock with {mWind} - {xWind}(kts) of wind and {rain} (mm/h) of rain""".format(hour = countHour+1, mWind = windArray[x], xWind = windArray[x+1], rain = rainArray[singleSteps])
+            dataString = """{hour} o'clock with {mWind} - {xWind}(kts) of wind and {rain} (mm/h) of rain\n""".format(hour = countHour+1, mWind = windArray[x], xWind = windArray[x+1], rain = rainArray[singleSteps])
             sailingPossibilitys = sailingPossibilitys + dataString
             sail = True
 
