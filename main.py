@@ -69,5 +69,5 @@ for x in range(0, 48, 2):
 if sail == True:
     sendEmail()
 
-with open('scapes.txt', 'w') as f:
+with open('scrapes.txt', 'w') as f:
     f.write(str(windArray) + str(rainArray))
