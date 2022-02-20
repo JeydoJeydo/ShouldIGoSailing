@@ -21,15 +21,18 @@ def sendEmail():
     emailSender = keys.emailSenderOwn
     emailReceiver = keys.emailReceiverOwn
     emailPassword = keys.emailPasswordOwn
-    print("send email")
 
     smtp_server = smtplib.SMTP(keys.emailServerOwn, 587)
     smtp_server.ehlo()
     smtp_server.starttls()
     smtp_server.ehlo()
-    smtp_server.login(keys.emailSenderOwn, keys.emailPasswordOwn)
-
-    msg_to_send="""From: Siling <{emailFrom}>\nTo: <{emailReceiver}>\n Subject: You should go siling today""".format(emailFrom = keys.emailSenderOwn, emailReceiver = keys.emailReceiverOwn)
+    smtp_server.login(emailSender, emailPassword)
+    print("logged in email")
+    msg_to_send="""From: Siling reminder <{emailFrom}>\nTo: <{emailReceiver}>\nSubject: You should go siling today\nThe Wind is perfect at {weatherTime}\nHave fun!""".format(emailFrom = emailSender, emailReceiver = emailReceiver, weatherTime = sailingPossibilitys)
+    print(msg_to_send)
+    smtp_server.sendmail(emailSender, emailReceiver, msg_to_send)
+    smtp_server.quit()
+    print("email send")
 
 pulled = r.content.decode("utf-8")
 soup = BeautifulSoup(r.content, 'html.parser')
@@ -47,10 +50,14 @@ for index, rain in zip(range(24), soup.select("div.data-rain")) :
 singleSteps = 0
 countHour = 23
 sail = False
+sailingPossibilitys = ""
 for x in range(0, 48, 2):
     if windArray[x] >= minWind and windArray[x+1] <= maxWind and rainArray[singleSteps] <= maxRain and countHour+1 >= minTime and countHour+1 <= maxTime:
         if countHour >= minHours:
             print("go sail!", countHour+1)
+            #dataString = str(countHour+1) + " O clock with min: " + str(windArray[x]) + "(kts), max: " + str(windArray[x+1]) + "(kts) and " + str(rainArray[x]) + "(mm/h) rain"
+            dataString = """\n{hour} o'clock with {mWind} - {xWind}(kts) of wind and {rain} (mm/h) of rain""".format(hour = countHour+1, mWind = windArray[x], xWind = windArray[x+1], rain = rainArray[singleSteps])
+            sailingPossibilitys = sailingPossibilitys + dataString
             sail = True
     else:
         print("dont go sail", countHour+1)
