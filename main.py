@@ -6,40 +6,40 @@ r = requests.get('https://www.windfinder.com/weatherforecast/salzgittersee')
 if r.status_code != 200:
     print("error while getting weather data")
 
-weatherArray = []
-rainArray = []
-minWind = 14
-maxWind = 30
-maxRain = 0
+windArray = [] #stores all wind data in pairs of two, starting from min
+rainArray = [] #stores all rain data
+minWind = 14 #minimal amount of wind (kts)
+maxWind = 30 #maximal amount of wind (kts)
+maxRain = 0 #maximal amount of rain (mm/h)
+minHours = 1 #minimal amount of hours in which the conditions are met
+minTime = 6 #time from which one can sail
+maxTime = 21 #time to which one can sail
 
 pulled = r.content.decode("utf-8")
 soup = BeautifulSoup(r.content, 'html.parser')
 s = soup.select("div.weathertable__body > div:nth-of-type(8)")
 
-#print(soup.select("h3.weathertable__headline")[0].text)
-print("Min and Max Wind")
 for index, wind in zip(range(48), soup.select("span.units-ws")) :
-    print(wind.text) #prints min and max wind variables
-    weatherArray.append(float(wind.text))
+    windArray.append(float(wind.text))
 
-print("Rain")
 for index, rain in zip(range(24), soup.select("div.data-rain")) :
     if(rain.find("span")) != None:
-        print(rain.select('span')[0].text)
         rainArray.append(float(rain.select('span')[0].text))
     else:
-        print(0)
         rainArray.append(0)
 
-rainStep = 0
+singleSteps = 0
+countHour = 23
 for x in range(0, 48, 2):
-    #print(weatherArray[x], weatherArray[x+1])
-    if weatherArray[x] >= minWind and weatherArray[x+1] <= maxWind and rainArray[rainStep] <= maxRain:
-        print("go sail!")
+    if windArray[x] >= minWind and windArray[x+1] <= maxWind and rainArray[singleSteps] <= maxRain and countHour+1 >= minTime and countHour+1 <= maxTime:
+        if countHour >= minHours:
+            print("go sail!", countHour+1)
     else:
-        print("dont go sail")
+        print("dont go sail", countHour+1)
 
-    rainStep = rainStep+1
+    if singleSteps >= 0:
+        countHour = singleSteps
+    singleSteps = singleSteps+1
 
 with open('scapes.txt', 'w') as f:
-    f.write(str(weatherArray) + str(rainArray))
+    f.write(str(windArray) + str(rainArray))
